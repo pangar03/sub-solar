@@ -1,0 +1,136 @@
+.form-mascot-card {
+  position: sticky;
+  top: 120px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.mascot {
+  position: relative;
+}
+
+.mascot-face {
+  width: 110px;
+  height: 110px;
+  border-radius: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  background:
+    radial-gradient(circle at top right, rgba(223, 255, 0, 0.3), transparent 35%),
+    linear-gradient(135deg, #111111, #1d1d1d);
+
+  color: #dfff00;
+
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+
+  animation: mascotFloat 4s ease-in-out infinite;
+}
+
+.mascot-sparkle {
+  position: absolute;
+  top: 16px;
+  right: 14px;
+  color: white;
+  opacity: 0.9;
+}
+
+.speech {
+  width: 220px;
+
+  padding: 18px 20px;
+  border-radius: 22px;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  border: 1px solid rgba(0, 0, 0, 0.06);
+
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+
+  color: #222;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  font-weight: 600;
+
+  text-align: center;
+
+  position: relative;
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.speech::before {
+  content: "";
+
+  position: absolute;
+  top: -10px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 18px;
+  height: 18px;
+
+  background: white;
+
+  border-left: 1px solid rgba(0, 0, 0, 0.05);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+
+  transform: translateX(-50%) rotate(45deg);
+}
+
+@keyframes mascotFloat {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(-2deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+}
+
+@media (max-width: 960px) {
+  .form-mascot-card {
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+
+  .mascot-face {
+    width: 84px;
+    height: 84px;
+    border-radius: 24px;
+  }
+
+  .speech {
+    width: min(320px, 100%);
+    text-align: left;
+  }
+
+  .speech::before {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .form-mascot-card {
+    flex-direction: column;
+  }
+
+  .speech {
+    width: 100%;
+    text-align: center;
+  }
+}

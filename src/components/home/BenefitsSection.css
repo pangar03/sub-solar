@@ -1,0 +1,28 @@
+/* Benefits */
+
+.info-card {
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(29, 143, 227, 0.12);
+  border-radius: var(--radius);
+  padding: 26px;
+  box-shadow: 0 14px 34px rgba(18, 81, 115, 0.08);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
+}
+
+.info-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.22rem;
+}
+
+.info-card p {
+  color: var(--muted);
+  line-height: 1.55;
+  margin: 0;
+}

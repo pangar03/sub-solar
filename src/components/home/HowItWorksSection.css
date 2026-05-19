@@ -1,0 +1,169 @@
+.how-section {
+  padding: 110px clamp(28px, 7vw, 120px);
+  background: #f8f8f4;
+}
+
+.how-header {
+  max-width: 760px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.how-header h2 {
+  font-size: clamp(2.2rem, 4vw, 4rem);
+  line-height: 0.98;
+  letter-spacing: -0.06em;
+  color: #0d0d0d;
+  margin-bottom: 20px;
+}
+
+.how-header p {
+  max-width: 640px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: #5f5f5f;
+}
+
+/* VIDEO */
+
+.how-video-card {
+  width: 100%;
+  max-width: 1120px;   /* antes era enorme */
+  margin: 0 auto 70px;
+
+  border-radius: 28px;
+  overflow: hidden;
+
+  background: #111;
+
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.12);
+}
+
+.how-video {
+  width: 100%;
+  height: 560px;   /* antes estaba absurdamente alto */
+  object-fit: cover;
+  display: block;
+}
+
+/* STEPS */
+
+.how-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-bottom: 80px;
+}
+
+.how-step {
+  border-top: 1px solid #d9d9d4;
+  padding-top: 28px;
+}
+
+.how-step svg {
+  color: #13a76b;
+  margin-bottom: 18px;
+}
+
+.how-step span {
+  display: block;
+  color: #8a8a8a;
+  font-weight: 800;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.how-step h3 {
+  font-size: 1.45rem;
+  margin-bottom: 14px;
+  color: #111;
+}
+
+.how-step p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* CTA */
+
+.how-cta {
+  text-align: center;
+}
+
+.how-cta h3 {
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  letter-spacing: -0.05em;
+  margin-bottom: 26px;
+}
+
+.how-cta-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* MATCH YOUR BUTTON DESIGN */
+
+.how-cta .btn-primary {
+  background: #dfff00; /* exact hero green-yellow */
+  color: #050505;
+
+  border: none;
+  box-shadow: 0 18px 38px rgba(223, 255, 0, 0.24);
+
+  padding: 18px 34px;
+  border-radius: 999px;
+
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+.how-cta .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 42px rgba(223, 255, 0, 0.35);
+}
+
+.how-cta .btn-secondary {
+  background: #050505;   /* exact black button */
+  color: white;
+
+  border: none;
+
+  padding: 18px 34px;
+  border-radius: 999px;
+
+  font-weight: 800;
+  font-size: 1rem;
+
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+}
+
+.how-cta .btn-secondary:hover {
+  background: #13a76b;
+  transform: translateY(-2px);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .how-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .how-video {
+    height: 320px;
+  }
+
+  .how-cta-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .how-cta .btn-primary,
+  .how-cta .btn-secondary {
+    width: 100%;
+  }
+}

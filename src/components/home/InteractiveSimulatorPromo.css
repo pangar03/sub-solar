@@ -1,0 +1,256 @@
+.simulator-promo-section {
+  padding: 120px clamp(28px, 7vw, 120px);
+  background: #f8f8f4;
+  color: #111;
+}
+
+.simulator-promo-header {
+  max-width: 820px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.simulator-promo-header h2 {
+  font-size: clamp(2.4rem, 5vw, 4.8rem);
+  line-height: 1;
+  letter-spacing: -0.06em;
+  margin-bottom: 22px;
+}
+
+.simulator-promo-header h2 span {
+  color: #777;
+}
+
+.simulator-promo-header p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #626262;
+  font-size: 1.12rem;
+  line-height: 1.65;
+}
+
+.simulator-promo-card {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  border: none;
+  cursor: pointer;
+
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 44px;
+  align-items: center;
+
+  padding: clamp(28px, 5vw, 60px);
+  border-radius: 36px;
+
+  background:
+    radial-gradient(circle at 15% 15%, rgba(223, 255, 0, 0.32), transparent 32%),
+    linear-gradient(135deg, #ffffff, #edf7ef);
+
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.08);
+  text-align: left;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.simulator-promo-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 34px 90px rgba(0, 0, 0, 0.12);
+}
+
+.simulator-house {
+  min-height: 430px;
+  border-radius: 30px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.26)),
+    linear-gradient(135deg, #dfffea, #eaf2ff);
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+.house-roof {
+  position: absolute;
+  top: 110px;
+  width: 270px;
+  height: 120px;
+  background: #101010;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+
+.house-roof::after {
+  content: "";
+  position: absolute;
+  inset: 48px 52px 18px;
+  background: repeating-linear-gradient(
+    90deg,
+    #1d8fe3 0 18px,
+    #0b4f8a 18px 22px
+  );
+  transform: skewX(-20deg);
+  opacity: 0.95;
+}
+
+.house-body {
+  position: absolute;
+  top: 220px;
+  width: 260px;
+  height: 150px;
+  border-radius: 22px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
+}
+
+.house-window {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: #dfff00;
+}
+
+.house-door {
+  width: 54px;
+  height: 92px;
+  border-radius: 18px 18px 0 0;
+  background: #13a76b;
+  align-self: flex-end;
+}
+
+.appliance-icon {
+  position: absolute;
+  width: 62px;
+  height: 62px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  background: white;
+  color: #111;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.1);
+}
+
+.icon-air {
+  left: 52px;
+  top: 70px;
+}
+
+.icon-wash {
+  right: 64px;
+  top: 110px;
+}
+
+.icon-light {
+  left: 92px;
+  bottom: 80px;
+}
+
+.battery-widget {
+  position: absolute;
+  right: 46px;
+  bottom: 54px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 20px;
+  border-radius: 22px;
+  background: #111;
+  color: white;
+}
+
+.battery-widget strong {
+  display: block;
+  font-size: 1.15rem;
+}
+
+.battery-widget span {
+  display: block;
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.simulator-promo-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.promo-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #13a76b;
+  font-weight: 800;
+  margin-bottom: 18px;
+}
+
+.simulator-promo-content h3 {
+  font-size: clamp(2.1rem, 4vw, 4rem);
+  line-height: 1;
+  letter-spacing: -0.06em;
+  margin: 0 0 22px;
+  color: #111;
+}
+
+.simulator-promo-content p {
+  color: #626262;
+  font-size: 1.08rem;
+  line-height: 1.65;
+  margin: 0 0 28px;
+}
+
+.promo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 999px;
+  padding: 17px 28px;
+  background: #111;
+  color: white;
+  font-weight: 800;
+}
+
+@media (max-width: 980px) {
+  .simulator-promo-card {
+    grid-template-columns: 1fr;
+  }
+
+  .simulator-house {
+    min-height: 360px;
+  }
+}
+
+@media (max-width: 640px) {
+  .simulator-promo-section {
+    padding: 90px 20px;
+  }
+
+  .simulator-promo-header {
+    text-align: left;
+  }
+
+  .simulator-promo-card {
+    padding: 22px;
+  }
+
+  .simulator-house {
+    min-height: 320px;
+  }
+
+  .house-roof {
+    width: 220px;
+  }
+
+  .house-body {
+    width: 220px;
+  }
+
+  .appliance-icon {
+    width: 52px;
+    height: 52px;
+  }
+}

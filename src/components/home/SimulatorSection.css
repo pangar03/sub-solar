@@ -1,0 +1,173 @@
+/* Simulator section */
+
+.process {
+  background: linear-gradient(135deg, rgba(233, 251, 243, 0.8), rgba(234, 246, 255, 0.9));
+  border-radius: 44px;
+  margin-inline: clamp(16px, 4vw, 50px);
+}
+
+.process.simulator-section {
+  padding: 0;
+  background: transparent;
+  border-radius: 44px;
+  overflow: visible;
+}
+
+.simulator-section .section-header {
+  padding: 58px clamp(20px, 6vw, 88px) 0;
+  margin-bottom: 24px;
+}
+
+.simulator-experience {
+  position: relative;
+  min-height: 620px;
+  border-radius: 42px;
+  overflow: hidden;
+  margin: 0 clamp(20px, 6vw, 88px);
+  box-shadow: 0 26px 70px rgba(12, 78, 118, 0.18);
+}
+
+.simulator-banner {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 42px;
+  overflow: hidden;
+  margin: 0;
+  cursor: pointer;
+  box-shadow: none;
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+}
+
+.simulator-banner:hover {
+  transform: scale(1.01);
+  box-shadow: none;
+}
+
+.simulator-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.simulator-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to top, rgba(5, 26, 38, 0.78), rgba(5, 26, 38, 0.34), rgba(5, 26, 38, 0.08)),
+    linear-gradient(to right, rgba(5, 26, 38, 0.42), transparent 62%);
+  display: flex;
+  align-items: flex-start;
+  padding: clamp(26px, 5vw, 54px);
+  cursor: pointer;
+}
+
+.simulator-text {
+  max-width: 620px;
+}
+
+.simulator-text h3 {
+  color: white;
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 4.4rem);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+}
+
+.simulator-text p {
+  color: rgba(255, 255, 255, 0.88);
+  margin-top: 14px;
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  line-height: 1.45;
+}
+
+.simulator-glass-cards {
+  position: absolute;
+  left: clamp(18px, 4vw, 48px);
+  right: clamp(18px, 4vw, 48px);
+  bottom: clamp(18px, 4vw, 44px);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  z-index: 2;
+}
+
+.simulator-glass-card {
+  min-height: 170px;
+  padding: 20px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: white;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.18);
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.simulator-glass-card:hover {
+  transform: translateY(-8px) rotate(-1deg);
+  background: rgba(255, 255, 255, 0.24);
+}
+
+.simulator-glass-card .icon-bubble {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 14px;
+  background: rgba(255, 255, 255, 0.22);
+  color: white;
+}
+
+.simulator-glass-card h3 {
+  color: white;
+  margin: 0 0 8px;
+  font-size: 1.12rem;
+  line-height: 1.05;
+}
+
+.simulator-glass-card p {
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.35;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.simulator-section .hero-actions {
+  padding: 24px clamp(20px, 6vw, 88px) 58px;
+  margin-top: 0 !important;
+}
+
+@media (max-width: 960px) {
+  .simulator-experience {
+    min-height: 760px;
+  }
+
+  .simulator-glass-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .simulator-experience {
+    min-height: 880px;
+    margin-inline: 16px;
+    border-radius: 32px;
+  }
+
+  .simulator-banner {
+    border-radius: 32px;
+  }
+
+  .simulator-glass-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .simulator-glass-card {
+    min-height: auto;
+  }
+}
